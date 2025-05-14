@@ -1,0 +1,25 @@
+{
+  "id": 5455140,
+  "name": "sem ver tag protection",
+  "target": "tag",
+  "source_type": "Repository",
+  "source": "Tiryoh/actions-mkdocs",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "refs/tags/v[0-9]*\\.[0-9]*\\.[0-9]*"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    }
+  ],
+  "bypass_actors": []
+}

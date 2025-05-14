@@ -1,0 +1,25 @@
+{
+  "id": 5454752,
+  "name": "default branch protection",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "Tiryoh/docker-ros2-desktop-vnc",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~DEFAULT_BRANCH"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    }
+  ],
+  "bypass_actors": []
+}

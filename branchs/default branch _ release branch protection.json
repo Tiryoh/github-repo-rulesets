@@ -1,0 +1,27 @@
+{
+  "id": 5454374,
+  "name": "default branch / release branch protection",
+  "target": "branch",
+  "source_type": "Repository",
+  "source": "Tiryoh/actions-mkdocs",
+  "enforcement": "active",
+  "conditions": {
+    "ref_name": {
+      "exclude": [],
+      "include": [
+        "~DEFAULT_BRANCH",
+        "refs/heads/release/**",
+        "refs/heads/v[0-9]*"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "type": "deletion"
+    },
+    {
+      "type": "non_fast_forward"
+    }
+  ],
+  "bypass_actors": []
+}
